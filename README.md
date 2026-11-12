@@ -43,7 +43,7 @@ Windows' built-in clock is perfectly good at telling you the time. The rest of t
 ### 1. The full desktop
 
 <p align="center">
-  <img src="Images/desktopv1.1.0.png" alt="WinKlok open on the Windows 11 desktop" width="100%">
+  <img src="Images/desktopv1.2.0.png" alt="WinKlok open on the Windows 11 desktop" width="100%">
 </p>
 
 ### 2. Right there on the taskbar
@@ -62,55 +62,40 @@ Ever felt tired of moving those bulky floating panels just for a stopwatch or ti
 
 <table>
   <tr>
-    <td width="33.33%"><img src="Images/calendar.jpg" alt="WinKlok calendar panel" width="100%"></td>
-    <td width="33.33%"><img src="Images/stopwatch.jpg" alt="WinKlok stopwatch panel" width="100%"></td>
-    <td width="33.33%"><img src="Images/timer.jpg" alt="WinKlok timer panel" width="100%"></td>
-  </tr>
-  <tr>
-  <td width="33.33%"><img src="Images/alarm.jpg" alt="WinKlok alarm panel" width="100%"></td>
-  <td width="33.33%"><img src="Images/notes.jpg" alt="WinKlok notes panel" width="100%"></td>
-  <td width="33.33%"><img src="Images/tasks.jpg" alt="WinKlok tasks panel" width="100%"></td>
-</tr>
-<tr>
-  <td width="33.33%"><img src="Images/settings.jpg" alt="WinKlok settings panel" width="100%"></td>
-  <td width="33.33%"><img src="Images/notipanel.jpg" alt="WinKlok notification panel" width="100%"></td>
-  <td width="33.33%"><img src="Images/notipanelabove.jpg" alt="WinKlok notification panel(above)" width="100%"></td>
-</tr>
+    <td width="33.33%"><img src="Images/rowfirst.png" alt="panel row 1" width="100%"></td>
+ </tr>
+ <tr>
+  <td width="33.33%"><img src="Images/rowtwo.png" alt="panel row 2" width="100%"></td>
+ </tr>
+ <tr>
+  <td width="33.33%"><img src="Images/rowthree.png" alt="panel row 3" width="100%"></td>
+ </tr>
 
 </table>
 
 ## What it does
 
 ### Calendar
-
-- Month, year, and decade views, with smooth vertical month scrolling.
-- Today and the selected date use your Windows accent colour.
-- The first day of the week follows your Windows regional setting.
+* Month, year and decade views, with smooth vertical month scrolling like the Windows calendar.
+* Today and the selected date are marked with your accent colour.
+* **Events**: a thin ring of coloured segments around every date that has events, a hover card (up to five events, then "+N more"), and a double-click editor with all-day, start/end, title, description, location and colour.
+* **Local mode**: any number of local calendars (with a protected *WinKlok (default)* calendar), import of Google Takeout ZIPs, `.ics` files and iCalendar links (duplicate-safe, edits are kept), and `.ics` export.
+* **Google Calendar Sync mode** (Settings > Calendar settings): two-way sync with your own Google Cloud OAuth Desktop client. Local and Google data are kept completely separate. Calendars you own can be deleted (the primary one can be emptied) from the same page; this needs the full `calendar` scope, see the Help section there.
+* Week numbers sit in a narrow column on the left and can be switched off in Calendar settings. The first day of the week and the first week of the year follow your Windows regional settings (no hard-coded ISO or Sunday rules).
 
 ### Stopwatch
+* Centisecond precision, up to 200 laps (the newest lap is always on top) and a smooth lap list.
+* Keeps running while the panel is closed and shows a live preview next to the clock.
 
-- Centisecond display precision and a lap list with the newest lap at the top.
-- Keeps running while the panel is closed.
-- Shows a live preview beside the taskbar clock while in use.
+### Timer
+* Hours / minutes / seconds pickers, optional timer names and one-click presets you can save and remove.
+* Run several timers at once. The most recently touched timer is shown beside the clock.
 
-### Timers
-
-- Hours, minutes, and seconds controls, optional names, and reusable presets.
-- Run multiple timers at once.
-- The most recently started or interacted-with timer gets the taskbar preview.
-
-### Alarms
-
-- Repeat on selected weekdays, add a label, choose a snooze duration, and pick from nine built-in sounds.
-- Preview sounds before choosing them.
-- If a timer or alarm becomes overdue while the PC is off or asleep, WinKlok reports it instead of surprising you with a late ring after you return.
-
-### Notes
-
-- Create as many notes as you need; changes save automatically.
-- Preview Markdown and LaTeX maths.
-- Paste rich content from browsers and common chat/AI tools while preserving supported structure such as headings, lists, tables, block quotes, code blocks, links, and equations.
-- Clickable links in previews, automatic plain-URL detection, adjustable text size, and a one-tap copy action for the note body.
+### Alarm
+* Repeat on any days, custom label, snooze length and one of nine built-in sounds with live audition.
+* The sound and snooze length you pick become the defaults for your next alarm.
+* If an alarm or timer came due while the PC was off or asleep, it never rings late. One popup lists
+  everything you missed, with dates and times.
 
 ### Tasks
 * A minimal task list: **+** drops down the input (cursor ready, Enter adds), the trash icon deletes all tasks (two clicks to confirm).
@@ -119,8 +104,23 @@ Ever felt tired of moving those bulky floating panels just for a stopwatch or ti
 
 ### Notification panel
 * The taskbar bell opens WinKlok's own notification panel instead of the Windows one: notifications grouped by app, relative times, dismiss one, dismiss a whole app, clear all, click to open the app.
-* In Settings choose **Separate panel** (the bell opens it on its own) or **Above WinKlok**: then the clock opens the WinKlok panel with the notifications stacked above it, sliding in from the right like the native flyout. A chevron in the tab bar folds the WinKlok panel into a slim strip so the notifications extend, and back (remembered).
+* The icon can be left or right of the date and time, and can be always on, off, or shown only while there are notifications.
+* In Settings > Notification settings choose **Separate panel** (the bell opens it on its own) or **Above WinKlok**: then the clock opens the WinKlok panel with the notifications stacked above it, sliding in from the right like the native flyout. A chevron in the tab bar folds the WinKlok panel into a slim strip so the notifications extend, and back (remembered).
 * Notifications are read locally from the Windows notification database (read-only copy, nothing leaves your PC). If Windows ever blocks that, the panel says so and offers the native one.
+
+### Notes
+* Any number of notes, saved automatically, with a rich preview of Markdown and LaTeX maths.
+* **Paste from ChatGPT, Gemini, Google and the web and keep the structure**: headings, lists,
+  tables, block quotes, code blocks, links and equations are converted to Markdown as you paste.
+* Links in the preview are clickable (only the link itself), plain URLs are detected automatically.
+* One-tap **Copy** button for the whole note body (the title is not included), adjustable text size.
+
+### Settings
+* Settings is split into **General**, **Notification** and **Calendar** pages.
+* General: taskbar previews, which tabs are shown (drag them to reorder), preview layout, 12/24-hour time (applied everywhere), panel material (acrylic or simple), default timer / alarm sounds and the **panel horizontal position**.
+* The panel opens in the corner next to the clock (below the taskbar when the taskbar is at the top). The position slider moves it along the screen in single-pixel steps, up to the left edge (useful on ultrawide screens); the notification stack then rises from the taskbar instead of sliding in from the edge.
+* **Sync time now** (Windows asks for administrator permission whenever it is needed).
+* A compact **About** card with the version, developer, project links and a bug / feature request button.
 
 ### Taskbar integration and settings
 
@@ -138,33 +138,29 @@ Ever felt tired of moving those bulky floating panels just for a stopwatch or ti
 4. Have fun...
 
 
-## Compatibility and notes
+## Tips
+* Scroll over the tab bar to reveal more tabs, or click a tab to slide it to the centre.
+* Right-click a timer preset to reveal its remove button.
+* WinKlok always hides the Windows notification bell while it runs. Its own notification icon is optional: turn it off in Settings and, with *Above WinKlok*, the clock still opens the notifications together with the panel.
 
-- Windows 11 with the XAML-based taskbar; 64-bit only.
-- Other taskbar mods that replace or rebuild the clock area may conflict. If you use one, test compatibility rather than assuming two mods can safely occupy the same pixels.
-- The optional notification bell is off by default.
-- WinKlok does not download videos, make accounts, or send telemetry. Its data is stored locally through Windhawk's storage facilities.
-- If something goes wrong, enable **Verbose logging** in the mod settings and review the Windhawk log.
-
+## Compatibility
+* Windows 11 with the XAML taskbar, 64-bit only.
+* Do not combine with other mods that rebuild the taskbar clock area (for example *Taskbar Clock
+  Customization*) until you have verified they coexist.
+* The panel always rests next to the taskbar (above a bottom taskbar, below a top one), even when it is set to auto-hide (it keeps clear of the area the taskbar occupies when shown).
+* WinKlok does not change the taskbar height. Use the *Taskbar height and icon size* mod for that.
+* To turn WinKlok off, disable the mod in Windhawk: the taskbar clock goes back to Windows immediately.
+* If something misbehaves, enable logging for this mod in Windhawk and check the log.
 
 ## For developers
-
-WinKlok is distributed as a single Windhawk C++ mod source file: [`WinKlok.wh.cpp`](WinKlok.wh.cpp).
-
-- **Rendering:** Win32 + Direct2D + DirectWrite.
-- **Taskbar integration:** Windows UI/XAML inspection, event hooks, and preview injection.
-- **Timekeeping:** stopwatch, timers, alarms, persistence, missed-event reporting, and scheduling logic.
-- **Notes:** a rich-text preview engine and clipboard HTML-to-Markdown conversion.
-- **Sounds:** alarm sounds are synthesised at runtime into in-memory WAV data; no sound assets need to be shipped.
-
-### Working on the source
-
-1. Install Windhawk and use its mod editor/build environment, or follow the current [Windhawk documentation](https://windhawk.net/).
-2. Make changes in `WinKlok.wh.cpp`, keeping the `WindhawkMod`, `WindhawkModReadme`, and `WindhawkModSettings` metadata blocks intact.
-3. Test on a Windows 11 x64 machine. Pay particular attention to Explorer/taskbar lifecycle, multiple monitors, light and dark themes, display scaling, touchpad scrolling, and taskbar preview sizing.
-4. Test timer/alarm behavior across sleep/restart scenarios before publishing a release.
-
-The taskbar is a moving target, so small Windows updates can change internal XAML details. Re-test after major Windows updates, and include the Windows build and relevant Windhawk log excerpt in bug reports.
+* Single-file C++ mod, organised in blocks: engine and persistence, taskbar integration (XAML
+  injection and hooks), native UI primitives, sound synthesis, rich-text and LaTeX engine, panel
+  pages and alert windows.
+* Rendering is plain Win32 + Direct2D/DirectWrite. There is no browser engine and no external asset.
+* Alarm sounds are synthesised at runtime into in-memory WAV buffers, so nothing needs to be shipped.
+* The pasted-HTML to Markdown converter lives next to the Notes editor and understands the clipboard
+  *HTML Format* produced by modern browsers and chat apps.
+* Contributions, bug reports and ideas are welcome on GitHub.
 
 ## Contributing and support
 
