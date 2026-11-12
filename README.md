@@ -1,10 +1,10 @@
 # WinKlok
 
-**A calmer, smarter clock mod for Windows 11 taskbar.**
+**A multifunctional notification center replacement mod for Windows 11.**
 
-WinKlok gives the Windows 11 taskbar clock a little more to do. Click the date/time area to open a native, Fluent-inspired panel for your calendar, stopwatch, timers, alarms, notes, and settings—with live stopwatch and timer previews beside the clock.
-
-Windows' built-in clock is perfectly good at telling you the time. The rest of the job, apparently, was left as an exercise for the user.
+WinKlok replaces the stock date/time flyout with a fast, native, Fluent-styled panel that
+combines a **Calendar, Stopwatch, Timer, Alarm, Tasks, Notes** and **Settings** in one place, plus its own **notification panel**, and puts
+live stopwatch and timer previews right next to the taskbar clock.
 
 ## Quick links
 
