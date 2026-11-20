@@ -43,7 +43,7 @@ live stopwatch and timer previews right next to the taskbar clock.
 ### 1. The full desktop
 
 <p align="center">
-  <img src="Images/desktopv1.2.0.png" alt="WinKlok open on the Windows 11 desktop" width="100%">
+  <img src="Images/desktopv1.3.0.png" alt="WinKlok open on the Windows 11 desktop" width="100%">
 </p>
 
 ### 2. Right there on the taskbar
@@ -62,13 +62,13 @@ Ever felt tired of moving those bulky floating panels just for a stopwatch or ti
 
 <table>
   <tr>
-    <td width="33.33%"><img src="Images/rowfirst.png" alt="panel row 1" width="100%"></td>
+    <td width="33.33%"><img src="Images/rowone.png" alt="panel row 1" width="100%"></td>
  </tr>
  <tr>
   <td width="33.33%"><img src="Images/rowtwo.png" alt="panel row 2" width="100%"></td>
  </tr>
  <tr>
-  <td width="33.33%"><img src="Images/rowthree.png" alt="panel row 3" width="100%"></td>
+  <td width="33.33%"><img src="Images/rowthird.png" alt="panel row 3" width="100%"></td>
  </tr>
 
 </table>
