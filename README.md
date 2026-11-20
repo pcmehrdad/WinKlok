@@ -73,14 +73,15 @@ Ever felt tired of moving those bulky floating panels just for a stopwatch or ti
 
 </table>
 
-## What it does
+## Features
 
 ### Calendar
 * Month, year and decade views, with smooth vertical month scrolling like the Windows calendar.
 * Today and the selected date are marked with your accent colour.
-* **Events**: a thin ring of coloured segments around every date that has events, a hover card (up to five events, then "+N more"), and a double-click editor with all-day, start/end, title, description, location and colour.
+* **Events**: a thin ring of coloured segments around every date that has events, a hover card (up to five events, then "+N more"), and a double-click editor with all-day, start/end, title, description, location, colour and **Repeat** (in Local mode: none, daily, weekly, monthly or yearly, kept at the same wall-clock time across daylight saving). When you edit a repeating event, choose **This event** (only that occurrence, which can get a repetition of its own) or **All events** (the whole series; set Repeat to None to stop repeating) at the top of the editor. Each local calendar (Settings > Calendar settings) can make new events repeat yearly by default, handy for birthdays and anniversaries.
 * **Local mode**: any number of local calendars (with a protected *WinKlok (default)* calendar), import of Google Takeout ZIPs, `.ics` files and iCalendar links (duplicate-safe, edits are kept), and `.ics` export.
 * **Google Calendar Sync mode** (Settings > Calendar settings): two-way sync with your own Google Cloud OAuth Desktop client. Local and Google data are kept completely separate. Calendars you own can be deleted (the primary one can be emptied) from the same page; this needs the full `calendar` scope, see the Help section there.
+* A **+** button on the date row adds an event for the selected day, a target button next to the month arrows jumps to today, and an optional clock with seconds can be shown at the top (Settings > General).
 * Week numbers sit in a narrow column on the left and can be switched off in Calendar settings. The first day of the week and the first week of the year follow your Windows regional settings (no hard-coded ISO or Sunday rules).
 
 ### Stopwatch
@@ -89,7 +90,7 @@ Ever felt tired of moving those bulky floating panels just for a stopwatch or ti
 
 ### Timer
 * Hours / minutes / seconds pickers, optional timer names and one-click presets you can save and remove.
-* Run several timers at once. The most recently touched timer is shown beside the clock.
+* Run several timers at once. The most recently touched timer is shown beside the clock. When a timer ends, its popup offers **+1m** / **+5m** to keep going.
 
 ### Alarm
 * Repeat on any days, custom label, snooze length and one of nine built-in sounds with live audition.
@@ -104,7 +105,7 @@ Ever felt tired of moving those bulky floating panels just for a stopwatch or ti
 
 ### Notification panel
 * The taskbar bell opens WinKlok's own notification panel instead of the Windows one: notifications grouped by app, relative times, dismiss one, dismiss a whole app, clear all, click to open the app.
-* The icon can be left or right of the date and time, and can be always on, off, or shown only while there are notifications.
+* The icon can be left or right of the date and time, and can be always on, off, or shown only while there are notifications. It shows the number of waiting notifications. A **Do not disturb** button (a bell with a strike through it) next to the settings gear switches Windows' own Do not disturb on and off, in the same *Priority only* mode as Windows: apps on your Windows priority list can still notify you, every other app is silenced. Your priority list is never changed, and the button follows what Windows is really applying (including automatic rules and focus sessions). Notifications slide out when dismissed and the panel scrolls with the same momentum as the main panel.
 * In Settings > Notification settings choose **Separate panel** (the bell opens it on its own) or **Above WinKlok**: then the clock opens the WinKlok panel with the notifications stacked above it, sliding in from the right like the native flyout. A chevron in the tab bar folds the WinKlok panel into a slim strip so the notifications extend, and back (remembered).
 * Notifications are read locally from the Windows notification database (read-only copy, nothing leaves your PC). If Windows ever blocks that, the panel says so and offers the native one.
 
@@ -113,30 +114,28 @@ Ever felt tired of moving those bulky floating panels just for a stopwatch or ti
 * **Paste from ChatGPT, Gemini, Google and the web and keep the structure**: headings, lists,
   tables, block quotes, code blocks, links and equations are converted to Markdown as you paste.
 * Links in the preview are clickable (only the link itself), plain URLs are detected automatically.
-* One-tap **Copy** button for the whole note body (the title is not included), adjustable text size.
+* One-tap **Copy** button for the whole note body (the title is not included), adjustable text size, **search** (Ctrl+F) over the note list and **Export** of a note as a .md file.
 
 ### Settings
 * Settings is split into **General**, **Notification** and **Calendar** pages.
-* General: taskbar previews, which tabs are shown (drag them to reorder), preview layout, 12/24-hour time (applied everywhere), panel material (acrylic or simple), default timer / alarm sounds and the **panel horizontal position**.
+* General: taskbar previews, which tabs are shown (drag them to reorder), preview layout, 12/24-hour time (applied everywhere), clock with seconds, panel material (acrylic or simple), default timer / alarm sounds and the **panel horizontal position**.
 * The panel opens in the corner next to the clock (below the taskbar when the taskbar is at the top). The position slider moves it along the screen in single-pixel steps, up to the left edge (useful on ultrawide screens); the notification stack then rises from the taskbar instead of sliding in from the edge.
+* **Backup and restore** of your notes, tasks, alarms, timer presets and local calendars in one file (Settings > General). Google data and sign-in details are never included.
 * **Sync time now** (Windows asks for administrator permission whenever it is needed).
 * A compact **About** card with the version, developer, project links and a bug / feature request button.
 
-### Taskbar integration and settings
 
-- Native Win32, Direct2D, and DirectWrite rendering—no embedded browser UI.
-- Acrylic or simple panel material, light/dark theme support, and Windows-style slide-up animation.
-- Mouse-wheel, touch, pen, and precision touchpad scrolling.
-- Optional taskbar previews and notification icon, configurable 12/24-hour display, preview layout, and default timer/alarm sounds.
-- Controls to sync system time, reload Explorer/the taskbar, or quit WinKlok and return the clock area to Windows.
+---
+
+## First-run defaults
+Notification icon on (left of the clock) when the Windows bell was showing (off otherwise), taskbar previews on, time format following Windows, acrylic blur, side-by-side layout, the *Windows Alarm*
+tone for both timers and alarms.
 
 ## Getting started
-
-1. Install [Windhawk](https://windhawk.net/).
-2. Open the [WinKlok mod page](https://windhawk.net/mods/winklok) and install/enable the mod through Windhawk. 
-3. Restart the Windows Explorer from the task manager if changes don't appear.
-4. Have fun...
-
+1. Install and enable the mod in Windhawk.
+2. WinKlok takes over the taskbar clock within a second or so. If the clock does not change, restart
+   Windows Explorer from Task Manager.
+3. Have fun...
 
 ## Tips
 * Scroll over the tab bar to reveal more tabs, or click a tab to slide it to the centre.
